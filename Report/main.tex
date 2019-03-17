@@ -26,7 +26,7 @@
 \section*{Introduction}
 \par{Travelling is said to be one of the biggest pleasures of life and today, there is a great amount of people who have taken a trip to different cities. Airplanes have become the most popular means of transportation when we talk about covering long distances because of their speed, prices and safety controls. However, airplane crashes have become the primary fear of travelers who are not familiar with aircrafts, even though the rate of accident is the lowest, compared to the other means of transportation \cite{bib:crashtransport}.}\\
 
-In the present work, we use data mining techniques in R, in order to gain insights about airplane crashes due to accidents, war and hijacks. We also provide a predictive model for the number of fatalities for the accidents in order to check if the security measures allow to reduce the number of fliers' death. The project is organized according to CRISP-DM framwwork \cite{bib:crisp}: (1) Problem Understanding, (2) Data Understanding, Data Preparation, (4) Modeling, (5) Evaluation, and (6) Deployment.
+In the present work, we use data mining techniques in R, in order to gain insights about airplane crashes due to accidents, war and hijacks. We also provide a predictive model for the number of fatalities for the accidents in order to check if the security measures allow to reduce the number of fliers' death. The project is organized according to CRISP-DM framework \cite{bib:crisp}: (1) Problem Understanding, (2) Data Understanding, Data Preparation, (4) Modeling, (5) Evaluation, and (6) Deployment.
 
 \section{Problem Understanding}
 First, we will study the influence of malicious human behavior (hijack) and war over the airplane crashes. We will see if the casualties and these factors have been controlled throughout the years. We will also compare the odds of survival in the situations of hijack, battle, and regular accidents. The time may also be correlated with the occurrence of crashes.\\
@@ -36,7 +36,7 @@ Are we able to survive a place crash? It is natural to believe that there is no 
 \section{Data Understanding}
 This project used the dataset known as "Historical Plane Crashes", which can be downloaded from \cite{bib:dataset}. All of the observations have been labeled with a date, which makes it interesting for doing time series analysis, and a summary of the crash, which can lead to relevant findings by using text mining techniques.\\
 
-The dataset consideted has 5783 observations, and 13 attributes corresponding to the \textbf{date}, \textbf{time}, \textbf{location}, \textbf{airline operator}, \textbf{flight number}, \textbf{route}, \textbf{aircraft type}, \textbf{registration}, \textbf{fuselage number}, \textbf{people aboard}, \textbf{number of fatalities}, \textbf{gound casualties}, and \textbf{summary of the accident}. The total file size is 2.178 KB.\\
+The dataset considered has 5783 observations, and 13 attributes corresponding to the \textbf{date}, \textbf{time}, \textbf{location}, \textbf{airline operator}, \textbf{flight number}, \textbf{route}, \textbf{aircraft type}, \textbf{registration}, \textbf{fuselage number}, \textbf{people aboard}, \textbf{number of fatalities}, \textbf{gound casualties}, and \textbf{summary of the accident}. The total file size is 2.178 KB.\\
 
 The summary, time and location attributes require the usage of text mining techniques to properly process all the information and therefore, studying in detail these attributes is out of the scope of this work.\\
 
@@ -83,7 +83,7 @@ Travelling by airplane has become widely known as the safest mode of transportat
 	\label{fig:numCrash}
 \end{figure}
 
-We can verify that there is no relationship between the time of the year and the airplane crashes, as it is seen in Figure \ref{fig:equalityPlot} (a). Also, we can notice in Figure \ref{fig:equalityPlot}, (b) that people will not always die in crashes, there is an equal chance of survival overall. \\
+We can verify that people will not always die in crashes, there is an equal chance of survival overall in Figure \ref{fig:equalityPlot} (a). Also, we can notice in Figure \ref{fig:equalityPlot}, (b) that there is no relationship between the time of the year and the airplane crashes. \\
 
 Hijacks should not be a major concern among the passengers, since only 0.6\% of the airplane crashes were caused by hijacks, and the last tragic events were the 9/11 attacks in 2001. It is normal to believe that there are many airplane crashes caused by war, but only this is only the 2.45\% of all the registered data. 
 
@@ -98,13 +98,15 @@ Hijacks should not be a major concern among the passengers, since only 0.6\% of 
 
 Many experiments were done before obtaining the most meaningful results, and only these tests were considered for the final code. The total running time was \texttt{2.6068} seconds.\\
 
-The world population should be convinced that airplanes are reliable, and statistics makes this statement stronger. Users should have access to this study and R Shiny offers a great way to create a server, which can be deployed in the cloud (either Google Cloud Platform or Amazon Web Services). The deployed code should have a user-friendly interface that allows users to check interactive plots, including time series predictors. 
+The world population should be convinced that airplanes are reliable, and statistics makes this statement stronger. Users should have access to this study and R Shiny offers a great way to create a server, which can be deployed in the cloud (either Google Cloud Platform or Amazon Web Services). The deployed code should have a user-friendly interface that allows users to check interactive plots, including time series predictors.\\
+
+The code used for this project is available in \url{https://github.com/odehnalm/dataMiningProject}.
 
 \section*{Conclusions}
 
 Most datasets have interesting hidden knowledge that requires intuition and creativity. This one is no exeption, because terrorist often "hijack" airplanes and airplanes involved in battle are often "shot down". We discovered that the human being has caused less than 4\% of all crashes and the efforts put into action in order to avoid accidents have made airplane crashes less likely to happen. After the 9/11 attacks, the security improvements managed to prevent airplane crashes caused by terrorists. There is still no world peace, so it is expected that more military planes crash in the future.\\
 
-Datasets may also have time-related data, which can be a hint for using time series models. In this project, we were able to fit a Holt-Winters model that forecasted a decrease in the number of fatalities for the next years. Where should we fly to in the next holidays?
+Datasets may also have time-related data, which can be a hint for using time series models. In this project, we were able to fit a Holt-Winters model that forecasted a decrease in the number of fatalities for the next years. Where should we fly the next holidays?
 
 
 \bibliography{CE}
